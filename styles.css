@@ -173,13 +173,13 @@ button:hover::after, .button:hover::after {
 
 
 .logo img {
-  height: 60px; /* Try 50–70px depending on your visual preference */
+  height: 120px; /* Try 50–70px depending on your visual preference */
   width: auto;
   display: block;
   object-fit: contain;
   margin: 0;
   padding: 0;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 10px rgba(205, 205, 205, 0.5));
 }
 
 
