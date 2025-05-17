@@ -153,18 +153,27 @@ button:hover::after, .button:hover::after {
     align-items: center;
     position: relative;
     z-index: 2;
+    align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  max-width: 200px;
+  flex-shrink: 0;
 }
+
 
 .logo img {
   max-width: 100%;
   height: auto;
   max-height: 80px;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.logo img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  transition: transform 0.3s ease;
 }
 
 .main-nav {
