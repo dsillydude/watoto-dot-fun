@@ -161,8 +161,10 @@ button:hover::after, .button:hover::after {
 }
 
 .logo img {
-    height: 80px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  max-width: 100%;
+  height: auto;
+  max-height: 80px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 .main-nav {
