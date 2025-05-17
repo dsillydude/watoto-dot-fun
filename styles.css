@@ -156,6 +156,14 @@ button:hover::after, .button:hover::after {
     align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding: 0.5rem 1rem; 
+    
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 50px;
+  }
 }
 
 .logo {
@@ -165,11 +173,15 @@ button:hover::after, .button:hover::after {
 
 
 .logo img {
-  max-width: 100%;
-  height: auto;
-  max-height: 80px;
+  height: 60px; /* Try 50–70px depending on your visual preference */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
+
 
 .logo img:hover {
   transform: scale(1.05) rotate(-2deg);
