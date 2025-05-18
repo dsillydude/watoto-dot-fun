@@ -2,7 +2,7 @@
 :root {
     /* Primary Colors */
     --purple-primary: #8A4FFF;
-    --coral-secondary: #FF7E5F;
+    --coral-secondary: auto;
     --mint-accent: #4ECCA3;
     --yellow-highlight: #FFDE59;
     --teal-background: #66BFBF;
@@ -12,9 +12,9 @@
     --space-light: #F9F9FF;
     
     /* Cartoon Face Colors */
-    --face-color: #FFDE59; /* Yellow face */
-    --face-outline: #FF7E5F; /* Coral outline */
-    --eye-color: white;
+    --face-color: transparent; /* Yellow face */
+    --face-outline: #e5dcda; /* Coral outline */
+    --eye-color: rgb(255, 255, 255);
     --pupil-color: #1A1B41;
     --mouth-color: #FF4B8B;
     --cheek-color: #FF9F9F;
@@ -224,6 +224,26 @@ button:hover::after, .button:hover::after {
     padding: 0;
 }
 
+/* Sticky mobile menu button for mobile devices */
+@media (max-width: 767px) {
+    .mobile-menu-toggle {
+        position: fixed;
+        top: 25px; /* Fixed position from top */
+        right: 25px;
+        transform: none; /* Remove the translateY since we're using fixed positioning */
+        z-index: 1000; /* Ensure it stays above all content */
+        background-color:transparent; /* Add background color to make it stand out */
+        border-radius: 50%; /* Make background circular */
+        padding: 5px; /* Add some padding */
+        box-shadow: var(--shadow-md); /* Add shadow for better visibility */
+    }
+    
+    /* Adjust the mobile menu position to align with the fixed button */
+    .mobile-menu {
+        top: 85px; /* Position below the fixed button */
+    }
+}
+
 /* Cartoon Face Styles */
 .cartoon-face {
     width: 40px;
@@ -235,7 +255,7 @@ button:hover::after, .button:hover::after {
 .face-circle {
     width: 100%;
     height: 100%;
-    background: var(--face-color);
+    background:rgb(243, 200, 45);
     border-radius: 50%;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -314,7 +334,7 @@ button:hover::after, .button:hover::after {
 
 /* Cartoon Face Active State - Happy Expression */
 .cartoon-face.active .face-circle {
-    background: var(--mint-accent);
+    background: rgb(226, 71, 71);
     transform: scale(1.1);
 }
 
